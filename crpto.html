@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../font-awesome(4.7.0)/css/font-awesome.min.css">
+    <title>crypto</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+            .navbar{
+                /* border: 2px solid red; */
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                  height: 80px;
+            }
+            a.navbarone{
+                /* border: 2px solid red; */
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-left: 5px;
+            }
+            a img{
+                width: 60px; 
+                height: 60px;
+            }
+            a.navbarone h2{
+                    /* border: 2px solid blue; */
+                    font-size: 35px;
+            }
+            a.navbarone span{
+                /* border: 2px solid red;98 */
+                font-size: 35px;
+            }
+            h2.cryptotext{
+                /* border: 2px solid black; */
+                align-items: center;
+                display: flex;
+                gap: 5px;
+                color: #4ad9ec  ;
+            }
+            div.all-content{
+                /* border: 2px solid green; */
+                display: flex;
+            }
+            .apparatus{
+                /* border: 2px solid blue; */
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0 30px;
+                padding: 2px;
+                gap: 20px;
+            }
+            a.content{
+                color: black;
+                padding: 5px;
+                /* border: 2px solid red; */
+                font-size: 19px;
+                font-weight: lighter;
+            }
+            div.fa-class{
+                /* border: 2px solid red; */
+                /* margin: 50px; */
+                display: flex;
+                gap: 5px;
+                align-items: center;
+          }
+            a.fa-content{
+                padding: 8px;
+                /* border: 2px solid black; */
+                display: flex;
+                margin: 0 20px 0 0;
+            }
+           header{
+                /* border: 2px solid black; */
+                display: flex;
+                min-height: 70vh;
+                background-color: #f1f8ff;
+            }
+            header h1{
+                /* border: 2px solid red; */
+                font-size: 60px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                max-width: 500px;
+            }
+            header p{
+                /* border: 2px solid red; */
+                font-size: 20px;
+                color: gray ;
+                margin-bottom: 30px;
+            }
+            header a.button{
+                /* border: 2px solid red; */
+                display: inline-block;
+                padding: 14px 30px;
+                background-color: #00bcd4;
+                font-size: 20px;
+                color: #fff;
+                border: none;
+                border-radius: 2px;
+                text-decoration: none;
+            }
+            header div.header-left{
+               /* border: 2px solid black;  */
+               display: flex;
+               align-items: center;
+               justify-content: center ;
+               min-height: 80vh;
+               padding: 40px 20px;  
+
+            }
+              header div.header-leftcontent{
+                /* border: 2px solid green; */
+                max-width: 700px; 
+              }
+               div.header1{
+                /* border: 2px solid black; */
+                display: flex;
+                min-height: 100vh;
+               }
+               div.header1right{
+                /* border: 2px solid green; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 80vh;
+               }
+                div.header1rightcontent{
+                    /* border: 2px solid rgb(204, 4, 80); */
+                    /* display: flex; */
+                    min-height: 80vh;
+                    max-width: 700px;
+                    margin-top:  5px;
+                }
+               div.header1right h1{
+                /* border: 2px solid blue; */
+                font-size: 50px;
+                /* margin-bottom: 20px; */
+                margin: 20px 0 0 20px;
+               }
+                div.header1right p.under{
+                    /* border: 2px solid magenta; */
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #00bcd4;
+                    margin-bottom: 40px;
+                    margin: 20px;
+                    margin-top: 2px;
+                }
+                 div.header1right p.content1{
+                    /* border: 2px solid gold; */
+                    font-size: 20px;
+                    align-items: center;
+                    margin: 20px;
+                    color: rgb(158, 154, 154);
+                 }
+                  div.header1right p.content2{
+                    /* border: 2px solid firebrick; */
+                    font-size: 20px;
+                    align-items: center;
+                    margin: 20px;
+                    color: rgb(158, 154, 154);  
+                  }
+                  div span{
+                    /* border: 2px solid red; */
+                    color: gray;
+                    font-size: 18px;
+                    font-weight: bold;
+                  }
+                  div.awesome{
+                     /* border: 2px solid red; */
+                     margin: 15px;
+                   }
+                  div.awesome i{
+                      display: inline-block;    
+                     border: 5px solid transparent;
+                     border-radius: 20px;
+                     color: #00bcd4;
+                     background-color: rgb(223, 252, 252);
+                      padding: 10px 10px;
+                  }
+                  div.learnmore a{
+                     border: 2px solid red;
+                display: inline-block;
+                padding: 14px 30px;
+                margin: 20px;
+                background-color: #00bcd4;
+                font-size: 20px;
+                color: #fff;
+                border: none;
+                border-radius: 2px;
+                text-decoration: none;
+                  }
+                  div.row{
+                       /* border: 2px solid red */
+                      display: flex;
+                       justify-content: space-around;
+                       flex-wrap: wrap;
+                       min-height: 55vh;
+                       align-items: center;
+                       background-color:  #f1f8ff;
+                   }
+                  .cris1{
+                    justify-content: center;
+                    text-align: center;
+                    /* border: 2px solid red; */
+                    width: calc(25% - 10px);
+                  }
+                  div.cris1 h1{
+                        /* border: 2px solid red; */
+                       font-size: 50px;
+                       font-weight: bold;
+                       margin-bottom: 10px;
+                  }
+                    div.cris1 p{
+                        font-size: 25px;
+                        color: #4ad9ec;
+                        font-weight: bold;
+                    }
+                    #next{
+                        text-align: center;
+                        /* border: 2px solid red; */
+                       /* background-color: rgb(223, 223, 253); */
+                      /* padding:  60px 20px; */
+                      max-width: 1100px;
+                      margin: auto;
+                      padding: 60px 20px;
+                      text-align: center;
+                    }
+                    #next h1{
+                        /* border: 2px solid red; */
+                        font-size: 40px;
+                        margin-bottom: 10px;
+                        color: #222;
+                    }
+                    .subtitle{
+                            color: #4da6ff;
+                            margin-bottom: 50px;
+                            font-size: 20px;
+                    }
+                   .row2{
+                        /* border: 2px solid red; */
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 40px 30px;
+                   }
+                     .box{
+                        text-align: left;
+                        transition: o.3s ease;
+                    }
+                    .box:hover{
+                        transform: translateY(-5px);
+                    }
+                   .cris2{
+                    display: flex;
+                    align-items: flex-start;
+                    text-align: left;
+                    gap: 15px;
+                    /* border: 2px solid blue; */
+                    padding: 20px;
+                   }
+                   .icon{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                   }
+                   .text h3{
+                    margin: 0 0 8px;
+                    font-size: 22px;
+                    color: #222;
+                   }
+                   .text p{
+                    margin: 0;
+                    color: #777;
+                    font-size: 16px;
+                    line-height: 2;
+                   }
+                   @media(max-width: 900px){
+                    .row2{
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                   }
+                   @media(max-width: 600px){
+                    .row2{
+                        grid-template-columns: 1fr;
+                    }
+                   }
+                   .services{
+                    /* background-color: rgb(223, 252, 252); */
+                    /* border: 2px solid black;             */
+                    text-align: center;
+                    padding: 60px 20px;
+                    background-color: #e6f7fb;
+                   }
+                   .services h2{
+                    font-size: 50px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                   }
+                   .subtitle{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #4ad9ec ;
+                    margin-bottom: 50px;
+                   }
+                   .services-container{
+                    /* border: 2px solid red; */
+                    display: grid;
+                    grid-template-columns: repeat(3 , 1fr);
+                    gap: 30px;
+                    max-width: 1100px;
+                    margin: auto;
+                   }
+                   .service-box{
+                    /* border: 2px solid black; */
+                    background: #fff;
+                    padding: 25px;
+                    padding-right: 40px;
+                    border-radius: 10px;
+                    /* display: flex; */
+                    gap: 15px;
+                    text-align: left;
+                    align-items: flex-start;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    transform: translateY(30px);
+                    opacity: 0;
+                    animation:  fadeUp 0.8s ease forwards;
+                   }
+                   .service-box:nth-child(1){animation-delay:
+                     0.1s;}
+                    .service-box:nth-child(2){animation-delay:
+                         0.2s;}
+                    .service-box:nth-child(3){animation-delay:
+                         0.3s;}
+                    .service-box:nth-child(4){animation-delay:
+                         0.4s;}
+                    .service-box:nth-child(5){animation-delay:
+                         0.5s;}
+                    .service-box:nth-child(6){animation-delay:
+                         0.6s;}
+                         .service-box img{
+                            width: 45px;
+                            height: 45px;
+                         }
+                         .service-box h4{
+                            margin: 0;
+                            font-size: 25px;
+                            font-weight: 600;
+                         }
+                         .service-box p{
+                            font-size: 18px;
+                            color: #6c757d;
+                            margin: 8px 0;
+                            font-weight: lighter;
+                         }
+                         .service-box a{
+                            color: #00c6d7;
+                            font-size: 19px;
+                            text-decoration: none;
+                         }
+                         .service-box:hover{
+                            transform: translateY(-8px);
+                            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                         }
+                         .service-box::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 60px;
+                            height: 60px;
+                            background:  #e6f7fb;
+                            clip-path: polygon(100% 0,  100% 100%, 0 0);
+                         }
+                         @keyframes fadeUp {
+                            to{
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                         }
+                         @media(max-width: 900px){
+                            .services-container{
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                         }
+                         @media(max-width: 900px){
+                            .services-container{
+                                grid-template-columns:  1fr;
+                            }
+                         }
+                         .roadmap-section{
+                            /* border: 2px solid red; */
+                            max-width: 1100px;
+                            margin: 0 auto;
+                            text-align: center;
+                         }
+                         .roadmap-header h2{
+                            font-size: 2.5rem;
+                            color: #333;
+                            margin-bottom: 5px;
+                         }
+                         .roadmap-header .subtitle{
+                            color: #1fc1c3;
+                            font-size: 1.1rem;
+                            margin-bottom: 80px;
+                         }
+                         .timeline-container{
+                            /* border: 2px solid black; */
+                            display: flex;
+                            justify-content: space-between;
+                            position: relative;
+                            padding: 0 10px;
+                            overflow-x: auto;
+                            scroll-behavior: smooth;
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
+                         }
+                         .timeline-container::-webkit-scrollbar{
+                            display: none;
+                         }
+                         .horizontal-line{
+                            /* border: 2px solid blue; */
+                            position: absolute;
+                            top: 13px;
+                            left: 8%;
+                            right: 8%;
+                            border-top: 2px dashed #b0b8c1;
+                            z-index: 1;
+                         }
+                         .timeline-item{
+                            position: relative;
+                            z-index: 2;
+                            width: 18%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                         }
+                         .diamond-top{
+                            width: 20px;
+                            height: 20px;
+                            background-color: #f1f4f6;
+                            border: 4px solid #1fc1c3;
+                            transform: rotate(45deg);
+                         }
+                         .vertical-line{
+                            height: 45px;
+                            border-left: 2px dashed #b0b8c1;
+                            margin: 8px 0;
+                         }
+                         .diamond-bottom{
+                            width: 10px;
+                            height: 10px;
+                            background-color: #1fc1c3;
+                            transform: rotate(45deg);
+                            margin-bottom: 25px;
+                         }
+                         .timeline-item h4{
+                            font-size: 1.05rem;
+                            color: #222;
+                            margin: 0 0 10px 0;
+                         }
+                         .timeline-item p{
+                            font-size: 0.85rem;
+                            color: #888;
+                            line-height: 1.5;
+                            margin: 0;
+                            padding: 0 10px;
+                         }
+                         .carousel-nav{
+                            margin-top: 60px;
+                            display: flex;
+                            justify-content: center;
+                            gap: 15px;
+                         }
+                         .nav-btn{
+                            width: 45px;
+                            height: 45px;
+                            background-color: #1fc1c3;
+                            color: white;
+                            border: none;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            font-size: 20px;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: background-color 0.3s ease;
+                         }
+                         .nav-btn:hover{
+                            background-color: #179ea0;
+                         }
+                         @media(max-width: 768px){
+                            .horizontal-line{
+                                display: none
+                            }
+                            .timeline-container{
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 40px;
+                            }
+                            .timeline-item{
+                                width: 100%;
+                            }
+                         }
+                          .timeline-container{
+                                    overflow: hidden;
+                                    scroll-behavior: smooth;
+                                }
+                                .token-container{
+                                    /* border: 2px solid red; */
+                                    font-family: 'Arial',sans-serif;
+                                    background-color: #e3f2fd;
+                                    height: 90vh;
+                                }
+                                .token-sale-section{
+                                    text-align: center;
+                                    padding: 80px 20px;
+                                    background-color: #e3f2fd;
+                                }
+                                .hypertext{
+                                    /* border: 2px solid red; */
+                                }
+                                h2{
+                                    font-size: 2.5rem;
+                                    color: #333;
+                                    margin-bottom: 10px;
+                                }
+                                p.hsubtitle{
+                                    color: #00bcd4;
+                                    font-weight: bold;
+                                    margin-bottom: 40px;
+                                }
+                                .countdown-container{
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 15px;
+                                    margin-bottom: 40px;
+                                }
+                                .time-box{
+                                    background: white;
+                                    width: 250px;
+                                    height: 120px;
+                                    padding: 25px 0;
+                                    border-radius: 4px;
+                                    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+                                }
+                                .time-box .number{
+                                    display: block;
+                                    font-size: 2rem;
+                                    font-weight: bold;
+                                    color: #333;
+                                }
+                                .time-box .label{
+                                    font-size: 0.9rem;
+                                    color: #00bcd4;
+                                }
+                                .buy-button{
+                                    border: 2px solid red;
+                                    background-color: #00bcd4;
+                                    color: white;
+                                    border: none;
+                                    padding: 15px 40px;
+                                    font-size: 1rem;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    transition: background 0.3s;
+                                }
+                                .buy-button:hover{
+                                    background-color: #0097a7
+                                }
+                                .payment-method{
+                                    /* border: 2px solid red; */
+                                    display: flex;
+                                    margin-top: 30px;
+                                    justify-content: center;
+                                    gap: 20px;
+                                }
+                                .payment-method img{
+                                    width: 50px;
+                                }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="" class="navbarone">
+            <h2 class="cryptotext">
+              <img class="icon-1" src="../images/icon-1.png" alt="">
+                 <span>CryptoCoin</span>
+            </h2>
+        </a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        <div class="all-content">
+            <div class="apparatus">
+                <a href="" class="content active">Home</a>
+                <a href="" class="content">About</a>
+                <a href="" class="content">Services</a>
+                <a href="" class="content">Roadmap</a>
+                <a href="" class="content">Pages</a>
+                <a href="" class="content">Contact</a>
+            </div>
+              <div class="fa-class">
+                <a href="" class="fa-content"><i class="fa fa-facebook"></i></a>
+                <a href="" class="fa-content"><i class="fa fa-twitter"></i></a>
+                <a href="" class="fa-content"><i class="fa fa-linkedin"></i></a>
+              </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-left">
+         <div class="header-leftcontent">
+            <h1>Make Better Life With Trusted CryptoCoin</h1>
+            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                 Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+            </p>
+                 <a href="" class="button">Explore More</a>
+         </div>
+        </div>
+        <div class="header-right">
+            <img src="../images/icon 2.png" alt="">
+        </div>
+    </header>
+    <div class="header1">
+        <div class="header1left">
+            <img src="../images/icon 3.png" alt="">
+        </div>
+            <div class="header1right">
+                <div class="header1rightcontent">
+                    <h1 class="About">About Us</h1>
+                    <p class="under">
+                        The Most Trusted Cryptocurrency Platform
+                    </p>
+                    <p class="content1">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. 
+                        Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="content2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. 
+                            Clita erat ipsum et lorem et sit.</p>
+                            <div class="awesome">
+                                <i class="fa fa-check  "></i>
+                                <span>Tempor erat elitr rebum at clita</span>
+                            </div>
+                              <div class="awesome">
+                                <i class="fa fa-check"></i>
+                                <span>Tempor erat elitr rebum at clita</span>
+                            </div>
+                              <div class="awesome">
+                                <i class="fa fa-check"></i>
+                                <span>Tempor erat elitr rebum at clita</span>
+                            </div>
+                            <div class="learnmore">
+                                 </p>
+                                        <a href="" class="button">Read More</a>
+                                </p>
+                            </div>
+                </div>
+            </div>
+    </div>
+        <div class="row">
+            <div class="cris1">
+                <img src="../images/icon4.png" alt="">
+                <h1 class="numbclass">123456</h1>
+                <p class="transclass">Today Transactions</p>
+            </div>
+             <div class="cris1">
+                <img src="../images/icon 5.png" alt="">
+                <h1 class="numbclass">123456</h1>
+                <p class="transclass">Monthly Transactions</p>
+            </div>
+             <div class="cris1">
+                <img src="../images/icon-6.png" alt="">
+                <h1 class="numbclass">123456</h1>
+                <p class="transclass">Total Transactions</p>
+            </div>
+        </div>
+        <section id="next">
+                    <h1>Why Us!</h1>
+                    <p class="subtitle">The Best In The crypto Industry</p>
+               <div class="row2">
+                <div class="box">
+                <div class="cris2">
+                     <img src="../images/icon-7.png" class="icon" alt="">
+                     <div class="text">
+                    <h3 >Easy To Start</h3>
+                    <p>
+                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                    </p>
+                    </div>
+            </div>
+            </div>
+            <div class="box">
+            <div class="cris2">
+                 <img src="../images/icon-8.png" class="icon" alt="">
+                 <div class="text">
+                  <h3>Easy To Start</h3>
+                <p>
+                    Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                </p>
+                </div> 
+        </div>
+        </div>
+        <div class="box">
+            <div class="cris2">
+                 <img src="../images/icon-9.png" class="icon" alt="">
+                 <div class="text">
+                          <h3>Easy To Start</h3>
+                    <p>
+                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="box">
+                <div class="cris2">
+                      <img src="../images/icon-10.png" class="icon" alt="">
+                      <div class="text">
+                    <h3>Easy To Start</h3>
+                    <p>
+                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="box">
+                <div class="cris2">
+                     <img src="../images/icon-11.png" class="icon" alt="">
+                     <div class="text">
+                    <h3>Easy To Start</h3>
+                    <p>
+                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="box">
+                <div class="cris2">
+                      <img src="../images/icon-12.png" class="icon" alt="">
+                      <div class="text">
+                    <h3>Easy To Start</h3>
+                    <p>
+                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
+                    </p>
+                </div>
+                </div>
+                </div>
+               </div>
+        </section>
+        <section class="services">
+            <h2>Services</h2>
+            <p class="subtitle">Buy, Sell And Exchange Cryptocurrency</p>
+            <div class="services-container">
+                <div class="service-box">
+                    <img src="../images/icon-7.png" alt="">
+                    <div>
+                        <h4>Currency Wallet</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+                 <div class="service-box">
+                    <img src="../images/icon-8.png" alt="">
+                    <div>
+                        <h4>Currency Transaction</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+                 <div class="service-box">
+                    <img src="../images/icon-9.png" alt="">
+                    <div>
+                        <h4>Bitcoin Investment</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+                 <div class="service-box">
+                    <img src="../images/icon-10.png" alt="">
+                    <div>
+                        <h4>Currency Exchange</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+                 <div class="service-box">
+                    <img src="../images/icon-11.png" alt="">
+                    <div>
+                        <h4>Bitcoin Escrow</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+                 <div class="service-box">
+                    <img src="../images/icon-12.png" alt="">
+                    <div>
+                        <h4>Token Sale</h4>
+                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <a href="">Read  More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="roadmap-section">
+            <div class="roadmap-header">
+                <h2>Roadmap</h2>
+                <p class="subtitle">We Translate Your Dream Into Reality</p>
+            </div>
+            <div class="timeline-container">
+                <div class="horizontal-line"></div>
+            <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+         <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+             <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+             <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+             <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+             <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+             <div class="timeline-item">
+                <div class="diamond-top"></div>
+                <div class="vertical-line"></div>
+                <div class="diamond-bottom"></div>
+                <h4>November 2045</h4>
+                <p>Diam dolor ipsum sit amet eratipsum lorem sit</p>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="nav-btn">&lt;</button>
+            <button class="nav-btn">&gt;</button>
+        </div>
+        </section>
+        <div class="token-container">
+            <section class="token-sale-section">
+                <div class="hypertext">
+                    <h2>Token Sale</h2>
+                    <p class="hsubtitle">Token Sale Countdown</p>
+                </div>
+                <div class="countdown-container">
+                    <div class="time-box">
+                        <span class="number">0</span>
+                        <span class="label">Days</span>
+                    </div>
+                       <div class="time-box">
+                        <span class="number">0</span>
+                        <span class="label">Hours</span>
+                    </div>
+                       <div class="time-box">
+                        <span class="number">0</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                       <div class="time-box">
+                        <span class="number">0</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+                <button class="buy-button">Buy-Tokens</button>
+                <div class="payment-method">
+                    <img src="../images/payment-1.png" alt="">
+                      <img src="../images/payment-2.png" alt="">
+                        <img src="../images/payment-3.png" alt="">
+                          <img src="../images/payment-4.png" alt="">
+                </div>
+            </section>
+        </div>
+        <script>
+            const container = document.querySelector('.timeline-container');
+            const buttons = document.querySelectorAll('.nav-btn');
+
+            buttons.forEach((btn, index) =>{
+                btn.addEventListener('click', () =>{
+                    const scrollAmount = index === 0? -300 : 300;
+                    container.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    })
+                })
+            })
+        </script>
+</body>
+</html>
